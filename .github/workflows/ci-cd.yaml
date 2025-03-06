@@ -42,6 +42,7 @@ jobs:
         # GitHub Secrets에서 네이버 API 인증 정보 가져오기
         NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
         NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        LOG_LEVEL: ${{ secrets.LOG_LEVEL }}
         # GitHub 변수에서 MODE와 SEARCH_KEYWORD 가져오기
         MODE: ${{ vars.MODE }}
         SEARCH_KEYWORD: ${{ vars.SEARCH_KEYWORD }}
