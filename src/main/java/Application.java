@@ -1,16 +1,16 @@
 import io.github.cdimascio.dotenv.Dotenv;
+import model.dto.NaverAPIResult;
 import service.searchapi.NaverSearchAPI;
 import service.searchapi.SearchAPI;
-
-import java.util.logging.Logger;
+import util.logger.MyLogger;
 
 public class Application {
     public static void main(String[] args) {
         Dotenv dotenv = Dotenv.load();
-        Logger logger = Logger.getLogger(Application.class.getName());
+        MyLogger logger = new MyLogger(Application.class);
         String searchKeyword = dotenv.get("SEARCH_KEYWORD");
         logger.info(searchKeyword);
-        SearchAPI searchAPI = new NaverSearchAPI();
+        NaverSearchAPI searchAPI = new NaverSearchAPI();
         searchAPI.searchByKeyword(searchKeyword);
     }
 }
