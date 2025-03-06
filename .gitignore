@@ -37,5 +37,8 @@ build/
 ### Mac OS ###
 .DS_Store
 
-#dotenv
+### dotenv ###
 .env
+
+### 파일 정리 ###
+*.xlsx
